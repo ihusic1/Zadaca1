@@ -12,7 +12,7 @@ public class App
      * main method
      * @param args String array
      */
-    public static void main(String[] args) throws RuntimeException
+    public static void main(String[] args)
     {
 
         Scanner input = new Scanner(System.in);
@@ -21,7 +21,8 @@ public class App
 
          try
          {
-            System.out.println("Rezultat za Dijkstrin algoritam je: " + ExpressionEvaluator.evaluate(arg));
+             double rez = ExpressionEvaluator.evaluate(arg);
+            System.out.println("Result: " + rez);
          }
          catch(RuntimeException e)
          {

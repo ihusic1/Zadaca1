@@ -18,7 +18,7 @@ public class ExpressionEvaluator
      * @return the result of the given expression
      * @throws RuntimeException if the expression is not written in given format / contains invalid characters
      */
-    public static Double evaluate(String string) throws RuntimeException
+    public static Double evaluate(String string)
     {
 
             Stack<String> ops = new Stack<String>();
@@ -64,9 +64,9 @@ public class ExpressionEvaluator
                     {
                         vals.push(Double.parseDouble(i));
                     }
-                    catch (Exception e)
+                    catch (RuntimeException e)
                     {
-                        throw new RuntimeException("Nevalidan aritmetički izraz!");
+                        throw new RuntimeException("Invalid expression!");
                     }
                 }
             }
